@@ -28,7 +28,7 @@ str(data)
 ##  $ interval: int  0 5 10 15 20 25 30 35 40 45 ...
 ```
 
-A quick check of the dataset using the str() function, we see that the dataframe has 17,568 observations and three variables. Two of the variables are integers (steps and interval) while another (date) is a character variable. As part of data processing, a time variable is added by transformed the date and interval into a date/time object and spliting it to obtain the time.
+A quick check of the dataset using the str() function, we see that the dataframe has 17,568 observations and three variables. Two of the variables are integers (steps and interval) while another (date) is a character variable. As part data processing, a time variable is added by transforming the date and interval into a date/time object and spliting it to obtain the time.
 
 
 ```r
@@ -40,7 +40,7 @@ data$time <- time
 
 ## Mean total number of steps taken per day
 
-To compute the mean total number of steps taken per day, the `by()` function is used to group the data into days before computing the totals for each day (missing data is suppressed). A histogram is ploted to show the distribution of daily activity. For clarity, `breaks` has been increase a bit to show the difference in the activity levels. 
+To compute the mean total number of steps taken per day, the `by()` function is used to group the data into days before computing the totals for each day (missing data is suppressed). A histogram is ploted to show the distribution of daily activity. For clarity, `breaks` has been increase a bit, to show the difference in the activity levels. 
 
 
 ```r
@@ -62,7 +62,7 @@ As the average is greater than 10,000 steps, the subject can be classified as 'a
 
 ## Average daily activity pattern
 
-Daily activity pattern is computed using the aggregate using the aggregate function which gets the averages across all time intervals.   
+Daily activity pattern is computed using the aggregate function which gets the averages across all time intervals.   
 
 
 ```r
@@ -158,4 +158,4 @@ Interestingly, the subject seems to be more active over the weekends than on the
 
 ## Conclusion
 
-On average, the subject seems to be 'active' with about 10395 steps. This is accoding to [a pubmed publication](http://www.ncbi.nlm.nih.gov/pubmed/14715035), where they suggest a classification of pedometer reading. However, in asmuch as the review suggests an active lifestyle, the data also shows sporadic difference not only between different time intervals but also between weekdays and weekends. Overall, classification of the steps taken would depend on the subject's underlining reason for using it and their ultimate goal.
+On average, the subject seems to be 'active' with about 10395 steps. This is according to [a pubmed publication](http://www.ncbi.nlm.nih.gov/pubmed/14715035), where they suggest a classification of pedometer reading. However, in asmuch as the review suggests an active lifestyle, the data also shows sporadic difference not only between different time intervals but also between weekdays and weekends. Overall, classification of the steps taken would depend on the subject's underlining reason for using it and their ultimate goal.
